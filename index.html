@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠팡_Cupang</title>
+
+    <!-- ./css폴더 main.css파일 링크 불러오기 -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+    <!-- 구글폰트 링크 걸기 -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Stylish&display=swap" rel="stylesheet">
+
+    <!-- 링크 걸어서 들고오는 방식 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+
+            //변수 설정 
+            //버튼이 되는 부분은 쿠팡_메뉴(ul)의 li들이다.
+            const btn = $('.cu_menu li');
+
+            //한 섹션 페이지 부분 변수 설정
+            const section = $('.wrap .page');
+
+                //큰 섹션 애니메이션 효과
+                //버튼이 클릭되었을때 펑션(함수기능적용)
+                btn.click(function(){
+
+                    //코드 깔끔을 위한 변수 선언
+                    //타겟이 되는
+                    let target = $(this);
+                    //i는 타겟의 인덱스값
+                    let i = target.index();
+
+                    let targetSection =section.eq(i);
+                    let point = targetSection.offset().top;
+
+                    //html의 바디부분이 스탑하면 애니메이션 스크롤탑 포인트시간(초)
+                    $('html, body').stop().animate({scrollTop: point}, 1500)
+
+                }) //퀵 버튼 클릭이벤트 
+        })
+     </script>    
+
+</head>
+
+<!-- 헤드 밑에다가 스크립트 제이쿼리 장착 -->
+<script src="/js/main._banner_slide.js"></script>
+
+
+<!-- 바디 시작! -->
+<body>
+
+    <!-- 카테고리 버튼 -->
+    <input type="radio" id="rad01" name="ctgry_btn"> 
+    <input type="radio" id="rad02" name="ctgry_btn">
+    <input type="radio" id="rad03" name="ctgry_btn">
+    <input type="radio" id="rad04" name="ctgry_btn">
+    <input type="radio" id="rad05" name="ctgry_btn">
+    <input type="radio" id="rad06" name="ctgry_btn">
+    <input type="radio" id="rad07" name="ctgry_btn">
+    <input type="radio" id="rad08" name="ctgry_btn">
+
+    <!-- 햄버거 버튼 -->
+    <!-- 햄버거 버튼 체크 박스 만들기 -->
+    <input type="checkbox" id="lnb_chk">
+    <!-- 인풋 타입 체크박스 아이디 정하기 -->
+
+
+    <div class="wrap">
+
+        <div class="side_cartegory_bar">
+            <ul class="cu_menu">
+                
+                <li><label for="rad01" class="lab01"><img src="./img/ctgry_main.png" alt="메인페이지"> 
+                메인</label></li>
+                
+                <li><label for="rad02" class="lab02"><img label for="rad02" src="./img/ctgry_sale.png" alt="오늘의_특가"> 
+                쿠팡특가</label></li>
+                
+                <li><label for="rad03" class="lab03"><img src="./img/ctgry_01.png" alt="여성의류"> 
+                여성의류</label></li>
+                
+                <li><label for="rad04" class="lab04"><img src="./img/ctgry_02.png" alt="남성의류"> 
+                남성의류</label></li>
+                
+                <li><label for="rad05" class="lab05"><img src="./img/ctgry_03.png" alt="식품"> 
+                식품</label></li>
+                
+                <li><label for="rad06" class="lab06"><img src="./img/ctgry_04.png" alt="가구"> 
+                가구</label></li>
+                
+                <li><label for="rad07" class="lab07"><img src="./img/ctgry_05.png" alt="가전"> 
+                가전</label></li>
+                
+                <li><label for="rad08" class="lab08"><img src="./img/ctgry_ft.png" alt="추천_푸터"> 
+                추천메뉴</label></li>
+            </ul>
+        </div>
+        <!-- side_cartegory_bar end! -->
+
+        <ul class="top_btn cu_menu">
+            <li>
+                <img src="./img/top_btn.png" alt="">
+            </li>
+        </ul>
+         
+        <div class="page_01 page">
+
+            <div class="page_boxing">
+
+                <div class="gnb">
+                    <ul>
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>마이페이지</li>
+                    </ul>
+            
+                </div>
+                <!-- gnb end! -->
+            
+                <header>
+            
+                    <div class="search_box">
+
+                        <!-- 햄버거 버튼 라벨만들기 -->
+                        <label for="lnb_chk" class="btn_lnb">
+                            <img class="menu_bar" src="./img/bars-solid.png" alt="메뉴바">
+                        </label>
+
+                        <!-- 검색 아이콘 만들기 -->
+                        <img class="search_bar" src="./img/magnifying-glass-solid.png" alt="검색">
+                    
+                    </div>
+                    <!-- search_box end! -->
+
+                    <!-- 햄버거 버튼 체크박스 열먼 lnb햄버거 메뉴들 -->
+                    <div class="ham_box">
+                        <ul class="ham_menu_01">
+                            
+                            <li><img id="ham_img_01" src="./img/ct_sale.png" alt="쿠팡특가"><font> 쿠팡특가</font>
+                                <ul class="ham_menu_02 h_m_02_1">
+                                <li>로켓설치</li>
+                                <li>공간별 집꾸미기</li>
+                                <li>헬스케어 특가</li>
+                                <li>쿠팡 Only</li>
+                                <li>싱글라이프</li>
+                                <li>실버스토어</li>
+                                <a class="ham_add_box ham_add01" href="https://c11.kr/19xp8"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 1.쿠팡특가 끝! -->
+                            
+                            <li><img id="ham_img_02" src="./img/ct_011.png" alt="여성의류"><font> 여성의류</font>
+                                <ul class="ham_menu_02 h_m_02_2">
+                                    <li>티셔츠</li>
+                                    <li>원피스</li>
+                                    <li>정장</li>
+                                    <li>바지/레깅스</li>
+                                    <li>니트류/조끼</li>
+                                    <li>트레이닝복</li>
+                                    <li>가방/잡화</li>
+                                    <li>한복/수의</li>
+                                    <li>아우터</li>
+                                    <li>스포츠의류</li>
+                                    <li>블라우스/셔츠</li>
+                                    <li>신발</li>
+                                <a class="ham_add_box ham_add02" href="https://c11.kr/19xpb"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 2.여성의류 끝! -->
+                            
+                            <li><img id="ham_img_03" src="./img/ct_02.png" alt="남성의류"><font> 남성의류</font>
+                                <ul class="ham_menu_02 h_m_02_3">
+                                    <li>티셔츠</li>
+                                    <li>정장세트</li>
+                                    <li>후드집업/집업</li>
+                                    <li>신발</li>
+                                    <li>맨투맨/후드티</li>
+                                    <li>니트/조끼</li>
+                                    <li>트레이닝복</li>
+                                    <li>바지/청바지</li>
+                                    <li>셔츠/남방</li>
+                                    <li>아우터</li>
+                                    <li>스포츠의류</li>
+                                    <li>테마의류</li>
+                                <a class="ham_add_box ham_add03" href="https://c11.kr/19xpb"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 3.남성의류 끝! -->
+                            
+                            <li><img id="ham_img_04" src="./img/ct_04.png" alt="식품"><font> 식품</font>
+                                <ul class="ham_menu_02 h_m_02_4">
+                                    <li>과일</li>
+                                    <li>채소</li>
+                                    <li>쌀/잡곡</li>
+                                    <li>견과류</li>
+                                    <li>축산/계란</li>
+                                    <li>수산물/건어물</li>
+                                    <li>생수/음료</li>
+                                    <li>커피/원두/차</li>
+                                    <li>과자/시리얼</li>
+                                    <li>면/통조림/가공식품</li>
+                                    <li>간편식/반찬</li>
+                                <a class="ham_add_box ham_add04" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 4.식품 끝! -->
+                            
+                            <li><img id="ham_img_05" src="./img/ct_05.png" alt="홈인테리어"><font> 홈인테리어</font>
+                                <ul class="ham_menu_02 h_m_02_5">
+                                    <li>F/W침구샵</li>
+                                    <li>방한용품</li>
+                                    <li>가구</li>
+                                    <li>수납/정리</li>
+                                    <li>홈데코</li>
+                                    <li>조명/스탠드</li>
+                                    <li>욕실</li>
+                                    <li>카페트/쿠션</li>
+                                    <li>침구</li>
+                                    <li>커튼</li>
+                                    <li>원예/가드닝</li>
+                                    <li>셀프인테리어</li>
+                                    <li>수예/수선</li>
+                                <a class="ham_add_box ham_add05" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 5.홈인테리어 끝! -->
+                            
+                            <li><img id="ham_img_06" src="./img/ct_06.png" alt="디지털가전"><font> 디지털가전</font>
+                                <ul class="ham_menu_02 h_m_02_6">
+                                    <li>로켓설치</li>
+                                    <li>TV/영상가전</li>
+                                    <li>냉장고</li>
+                                    <li>세탁기</li>
+                                    <li>생활가전</li>
+                                    <li>청소기</li>
+                                    <li>계절가전</li>
+                                    <li>뷰티/헤어가전</li>
+                                    <li>건강가전</li>
+                                    <li>주방가전</li>
+                                    <li>컴퓨터</li>
+                                    <li>휴대폰</li>
+                                    <li>태블릿PC</li>
+                                <a class="ham_add_box ham_add06" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 6.디지털가전 끝! -->
+                            
+                            <li><img id="ham_img_07" src="./img/ct_07.png" alt="도서음반"><font> 도서/음반</font>
+                                <ul class="ham_menu_02 h_m_02_7">
+                                    <li>유아/어린이</li>
+                                    <li>소설/에세이/시</li>
+                                    <li>초중고참고서</li>
+                                    <li>가정 살림</li>
+                                    <li>건강 취미</li>
+                                    <li>경제 경영</li>
+                                    <li>과학/공학</li>
+                                    <li>국어/외국어</li>
+                                    <li>대학교재</li>
+                                    <li>만화/라이트노벨</li>
+                                    <li>사회 정치</li>
+                                    <li>역사</li>
+                                    <li>예술</li>
+                                    <li>인문</li>
+                                <a class="ham_add_box ham_add07" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 7.도서음반 끝! -->
+                            
+                            <li><img id="ham_img_08" src="./img/ct_08.png" alt="문구오피스"><font> 문구/오피스</font>
+                                <ul class="ham_menu_02 h_m_02_8">
+                                    <li>사무용품 전문관</li>
+                                    <li>미술/화방용품</li>
+                                    <li>캐릭터 문구</li>
+                                    <li>학용품/수업준비</li>
+                                    <li>필기류</li>
+                                    <li>노트/메모지</li>
+                                    <li>다이어리</li>
+                                    <li>비인더/파일</li>
+                                    <li>파티/이벤트</li>
+                                    <li>데코/포장용품</li>
+                                    <li>카드/엽서</li>
+                                    <li>앨범</li>
+                                    <li>복사용품/라벨지</li>
+                                    <li>보드/칠판/광고</li>
+                                <a class="ham_add_box ham_add08" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 8.문구오피스 끝! -->
+                            
+                            <li><img id="ham_img_09" src="./img/ct_09.png" alt="반려동물"><font> 반려동물용품</font>
+                                <ul class="ham_menu_02 h_m_02_9">
+                                    <li>강아지 사료</li>
+                                    <li>강아지 간식</li>
+                                    <li>강아지 영양제</li>
+                                    <li>강아지 용품</li>
+                                    <li>고양이 사료</li>
+                                    <li>고양이 간식</li>
+                                    <li>고양이 영양제</li>
+                                    <li>고양이 용품</li>
+                                    <li>펫티켓 산책용품</li>
+                                    <li>관상어 용품</li>
+                                    <li>소동물/가축용품</li>
+                                <a class="ham_add_box ham_add09" href="https://c11.kr/19xpp"></a>
+                                </ul>
+                                <!-- ham_menu_02 end! -->
+                            </li>
+                            <!-- 9.반려동물용품 끝! -->
+
+
+
+
+                        </ul>
+                        <!-- ham_menu_01 end!  -->
+
+                    </div>
+                    <!-- ham_box end! -->
+
+                    <div class="logo_box">
+                        <img src="./img/cupang_logo.png" alt="쿠팡로고">
+                    </div>
+
+                    <div class="cupang_best_menu_box">
+                        <ul>
+                            <li style="background-color: #aadae9d4;">
+                            <img src="./img/rocket.png" alt="로켓배송"></li>
+
+                            <li style="background-color: #2ce95eb5;">
+                            <img src="./img/fresh.png" alt="로켓프레쉬"></li>
+
+                            <li style="background-color: #4e84d4cf;">
+                            <img src="./img/wow.png" alt="로켓와우"></li>
+
+                            <li style="background-color: #e58ff6cf;">
+                            <img src="./img/gik_gu.png" alt="로켓직구"></li>
+
+                            <li style="background-color: #17b3e299;">
+                            <img src="./img/play.png" alt="쿠팡플레이"></li>
+                        </ul>
+                    </div>
+
+                    
+                </header>
+                <!-- header end! -->
+                
+                <div class="add_box">
+                </div>
+
+                <div class="today_brand_box">
+                    <div class="brand_box">
+                        <div class="brand_box_name">
+                            <p>오늘의 브랜드</p>
+                        </div>
+                        <div class="brand_list">
+                            <ul>
+                                <li>
+                                <img src="./img/brand_01.png" alt="브랜드1_퍼펙토"></li>
+                                <li>
+                                <img src="./img/brand_02.png" alt="브랜드2_백산수"></li>
+                                <li>
+                                <img src="./img/brand_03.png" alt="브랜드3_해태제과"></li>
+                                <li>
+                                <img src="./img/brand_04.png" alt="브랜드4_프롬가"></li>
+                                <li>
+                                <img src="./img/brand_05.png" alt="브랜드5_참존"></li>
+                                <li>
+                                <img src="./img/brand_06.png" alt="브랜드6_리버티"></li>
+                                <li>
+                                <img src="./img/brand_07.png" alt="브랜드7_제니퍼룸"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- page_boxing end! -->
+
+        
+        </div>
+        <!-- page01 end! -->
+
+        <div class="page_02 page">
+
+            <div class="page_boxing">
+
+                <div class="seller_sale_box">
+
+                    <div class="seller_sale_name">
+                        <p>오늘의 판매자 특가</p></div>
+
+                    <div class="seller_sale_con">
+                       <div class="seller_sale_con_boxing">
+                        <ul class="item_style_set">
+
+                            <li><a href="https://c11.kr/19wi8">
+                                <img class="con2_item_imgs item_imgs"" src="./img/women_item01.png" alt="여성의류_01">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">우리모피 정통 러시안스타일 북미산 밍크모자 풀스킨</p>
+                                <p> <font style="color: orangered; font-size: 15px;">35% </font><del> 480,000원</del></p>
+                                <p>312,000원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 15,600원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품1번 끝 -->
+
+                            <li><a href="https://c11.kr/19wdo">
+                                <img class="con2_item_imgs item_imgs"" src="./img/men_item03.png" alt="남성의류_03">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">양털 기모바지 츄리닝 바지 트레이닝바지 남자 겨울바지</p>
+                                <p> <font style="color: orangered; font-size: 15px;">41% </font><del> 40,900원</del></p>
+                                <p>23,900원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,195원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품2번 끝 -->
+
+                            <li><a href="https://c11.kr/19whd">
+                                <img class="con2_item_imgs item_imgs"" src="./img/interior_item03.png" alt="인테리어_03">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">에코상사 고무나무 원목 2단 협탁 테이블</p>
+                                <p> <font style="color: orangered; font-size: 15px;">18% </font><del> 23,900원</del></p>
+                                <p>19,450원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 973원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품3번 끝 -->
+                                                                                    
+                            <li><a href="https://c11.kr/19wc4">
+                                <img class="con2_item_imgs item_imgs" src="./img/women_item03.png" alt="여성의류_03">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">데일리 에잇센스 여성 니삭스</p>
+                                <p> <font style="color: orangered; font-size: 15px;">32% </font><del> 2,500원</del></p>
+                                <p>1,700원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 85원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품4번 끝 -->
+
+                            <li><a href="https://c11.kr/19whr">
+                                <img class="con2_item_imgs item_imgs" src="./img/digital_item04.png" alt="digital_04">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">젠하이저 모멘텀4 와이어리스 블루투스 헤드폰</p>
+                                <p> <font style="color: orangered; font-size: 15px;">6% </font><del> 479,000원</del></p>
+                                <p>449,000원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp; 최대 19,765원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품5번 끝 -->
+                        </ul>
+                        <ul class="item_style_set">
+
+                            <li><a href="https://c11.kr/19wh8">
+                                <img class="con2_item_imgs item_imgs" src="./img/interior_item01.png" alt="인테리어_02">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">말랑하니 뒤집는 신생아 수유 취침등</p>
+                                <p> <font style="color: orangered; font-size: 15px;">21% </font><del> 18,900원</del></p>
+                                <p>14,900원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 745원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품6번 끝 -->
+
+                            <li><a href="https://c11.kr/19wht">
+                                <img class="con2_item_imgs item_imgs" src="./img/digital_item05.png" alt="digital_05">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">LG전자 트롬 드럼세탁기 F21WDU 21kg 방문설치
+                                </p>
+                                <p> <font style="color: orangered; font-size: 15px;">9% </font><del> 994,170원</del></p>
+                                <p>902,320원</p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 42,860원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품7번 끝 -->
+
+                            <li><a href="https://c11.kr/19wgw">
+                                <img class="con2_item_imgs item_imgs" src="./img/food_item05.png" alt="food_05">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">설감 프리미엄 왕 반건시 선물세트 2호</p>
+                                <p> <font style="color: orangered; font-size: 15px;">25% </font><del> 39,900원</del></p>
+                                <p>29,900원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,495원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품8번 끝 -->
+                                                        
+                            <li><a href="https://c11.kr/19wh5">
+                                <img class="con2_item_imgs item_imgs" src="./img/interior_item01.png" alt="인테리어_01">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">엘레나하임 더 플라워 샤기 러그</p>
+                                <p> <font style="color: orangered; font-size: 15px;">8% </font><del> 238,000원</del></p>
+                                <p>216,980원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 10,849원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품9번 끝 -->
+
+                            <li><a href="https://c11.kr/19wdz">
+                                <img class="con2_item_imgs item_imgs" src="./img/men_item05.png" alt="남성의류_05">
+                            <div class="item_info">
+                                <span>무료배송</span>
+                                <p style="font-size: 15px;">[노스페이스] 캠프 그라운드 EX 플리스 후디 NJ4FN59A_IVO</p>
+                                <p> <font style="color: orangered; font-size: 15px;">33% </font><del> 149,000원</del></p>
+                                <p>99,080원 </p>
+                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 4,954원 적립</p>
+                            </div> </a></li>
+                            <!-- 상품10번 끝 -->
+                        </ul>
+                        <!-- item_style_set end! -->
+                       </div> 
+                       <!-- seller_sale_con_boxing end! -->
+                    </div>
+                    <!-- seller_sale_con end! -->
+
+                </div>
+
+            <!-- page_02 하단 미니광고 -->
+            <div class="add_box_page_02"></div>
+
+            </div>
+            <!-- page_boxing end! -->
+
+        </div>
+        <!-- page_02 end! -->
+
+        <!-- 아이템 카테고리 페이지 -->
+        <div class="page_03 page">
+
+            <div class="page_boxing">
+
+                <div class="womens_cloth_box item_box">
+
+                    <div class="womens_cloth_name item_name">
+                        <div class="item_name_box">
+                            <p>여성의류</p>
+                        </div>
+                        <div class="item_category_ul">
+                            <ul>
+                                <li>티셔츠</li>
+                                <li>원피스</li>
+                                <li>정장</li>
+                                <li>바지/레깅스</li>
+                                <li>니트류/조끼</li>
+                                <li>가방/잡화</li>
+                                <li>한복/수의</li>
+                                <li>아우터</li>
+                                <li>스포츠의류</li>
+                                <li>신발</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="womens_cloth_con item_con">
+
+                        <div class="item_con_boxing">
+
+                            <div class="item_add_img"></div>
+
+                            <div class="item_more_box">
+
+                                <div class="item_attention_txt">
+                                    <p>여성의류 . 패션 최대 75% 할인 이벤트 진행</p>
+                                    <img src="./img/attention_right.png" alt="이동버튼">
+                                </div>
+                                
+                                <div class="item_list">
+
+                                <!--1. 배너박스를 만든다 -->
+                                <section class="banner_box">
+                                    <!-- 2. 배너를 만든다. -->
+                                    <div class="banner">
+                                        <!-- 3. 프레임을 만든다. -->
+                                        <div class="frame">
+                                            <ul class="item_style_set">
+                                                
+                                                <li><a href="https://c11.kr/19wi8">
+                                                    <img class="item_imgs" src="./img/women_item01.png" alt="여성의류_01">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">우리모피 정통 러시안스타일 북미산 밍크모자 풀스킨</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">35% </font><del> 480,000원</del></p>
+                                                    <p>312,000원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 15,600원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품1번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wia">
+                                                    <img class="item_imgs" src="./img/women_item02.png" alt="여성의류_02">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">레인보우 큐빅볼륨 기본볼륨 가발 똥머리 올림머리 당고머리</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">34%</font><del> 15,000원</del></p>
+                                                    <p>9,800원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 490원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품2번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wc4">
+                                                    <img class="item_imgs" src="./img/women_item03.png" alt="여성의류_03">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">데일리 에잇센스 여성 니삭스</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">32% </font><del> 2,500원</del></p>
+                                                    <p>1,700원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 85원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품3번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wc5">
+                                                    <img class="item_imgs" src="./img/women_item04.png" alt="여성의류_04">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">에스랑제이 모노라인 여성 숄 머플러</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">20% </font><del> 25,000원</del></p>
+                                                    <p>19,800원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 990원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품4번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wc8">
+                                                    <img class="item_imgs" src="./img/women_item05.png" alt="여성의류_05">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">티호킨 루즈핏 카라 긴팔 니트 집업</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">13% </font><del> 33,430원</del></p>
+                                                    <p>28,900원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,445원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품5번 끝 -->
+                                                </ul>
+                                                </div>
+                                                <!-- 프레임 끝 -->
+                                            </div>
+                                            <!-- 배너 끝 -->
+                                        
+                                            <!-- 재생 정지 버튼  -->
+                                            <div class="ctr_btn">
+                                                <a href="#play" class="play"><img src="./img/2-images/play.jpg" alt="play"></a>
+                                                <a href="#stop" class="stop"><img src="./img/2-images/stop.jpg" alt="stop"></a>
+                                            </div>
+                                            <!-- 재생 정지 버튼 끝 -->
+                                        
+                                            <!-- 좌우 이동 버튼 -->
+                                            <div class="btn">
+                                                <a href="#left" class="left"><img src="./img/2-images/prev.jpg" alt="prev"></a>
+                                                <a href="#right" class="right"><img src="./img/2-images/next.jpg" alt="next"></a>
+                                            </div>
+                                            <!-- 좌우 이동 버튼 끝 -->
+                                        
+                                        </section>
+                                        <!-- 섹션 끝! -->
+                                </div>
+
+                            </div>
+                            <!-- item_more_box -->
+
+                        </div>
+                        <!-- item_con_boxing -->
+                    </div>      
+                </div>
+                <!-- womens_cloth_box -->
+
+            </div>
+            <!-- page_boxing -->
+
+        </div>
+        <!-- page_03 end! -->
+
+        <!-- 아이템 카테고리 페이지 -->
+        <div class="page_04 page">
+
+            <div class="page_boxing">
+
+                <div class="mens_cloth_box item_box">
+
+                    <div class="mens_cloth_name item_name">
+                        <div class="item_name_box">
+                            <p>남성의류</p>
+                        </div>
+                        <div class="item_category_ul">
+                            <ul>
+                                <li>티셔츠</li>
+                                <li>정장세트</li>
+                                <li>신발</li>
+                                <li>맨투맨/후드티</li>
+                                <li>니트/조끼</li>
+                                <li>바지/청바지</li>
+                                <li>셔츠/남방</li>
+                                <li>아우터</li>
+                                <li>스포츠의류</li>
+                                <li>테마의류</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mens_cloth_con item_con">
+
+                        <div class="item_con_boxing">
+
+                            <div class="item_add_img"></div>
+
+                            <div class="item_more_box">
+
+                                <div class="item_attention_txt">
+                                    <p>캐주얼&스포츠 최대 80%
+                                        아디다스/나이키 / 언더아머 외</p>
+                                    <img src="./img/attention_right.png" alt="이동버튼">
+                                </div>
+                                
+                                <div class="item_list">
+
+                                <!--1. 배너박스를 만든다 -->
+                                <section class="banner_box">
+                                    <!-- 2. 배너를 만든다. -->
+                                    <div class="banner">
+                                        <!-- 3. 프레임을 만든다. -->
+                                        <div class="frame">
+                                            <ul class="item_style_set">
+                                                
+                                                <li><a href="https://c11.kr/19wdb">
+                                                    <img class="item_imgs" src="./img/men_item01.png" alt="남성의류_01">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">빅군 컴포즈 조거팬츠</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">10% </font><del> 45,980원</del></p>
+                                                    <p>41,800원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;대 2,090원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품1번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wdk">
+                                                    <img class="item_imgs" src="./img/men_item02.png" alt="남성의류_02">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">남자 봄 가을 하운드투스 체크 울 자켓 베이지 세미 정장 직장 남성 블레이저 싱글 재킷</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;"> 0% </font><del> 110,000원 </del></p>
+                                                    <p>110,000원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 5,500원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품2번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wdo">
+                                                    <img class="item_imgs" src="./img/men_item03.png" alt="남성의류_03">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">양털 기모바지 츄리닝 바지 트레이닝바지 남자 겨울바지</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">41% </font><del> 40,900원</del></p>
+                                                    <p>23,900원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,195원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품3번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wdw">
+                                                    <img class="item_imgs" src="./img/men_item04.png" alt="남성의류_04">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">디엘크리 남성용 3버튼 싱글 울코트</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">12% </font><del> 149,000원</del></p>
+                                                    <p>130,450원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 6,523원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품4번 끝 -->
+
+                                                <li><a href="https://c11.kr/19wdz">
+                                                    <img class="item_imgs" src="./img/men_item05.png" alt="남성의류_05">
+                                                <div class="item_info">
+                                                    <span>무료배송</span>
+                                                    <p style="font-size: 15px;">[노스페이스] 캠프 그라운드 EX 플리스 후디 NJ4FN59A_IVO</p>
+                                                    <p> <font style="color: orangered; font-size: 15px;">33% </font><del> 149,000원</del></p>
+                                                    <p>99,080원 </p>
+                                                    <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                        style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 4,954원 적립</p>
+                                                </div> </a></li>
+                                                <!-- 상품5번 끝 -->
+
+                                                    </ul>
+                                                </div>
+                                                <!-- 프레임 끝 -->
+                                            </div>
+                                            <!-- 배너 끝 -->
+                                        
+                                            <!-- 재생 정지 버튼  -->
+                                            <div class="ctr_btn">
+                                                <a href="#play" class="play"><img src="./img/2-images/play.jpg" alt="play"></a>
+                                                <a href="#stop" class="stop"><img src="./img/2-images/stop.jpg" alt="stop"></a>
+                                            </div>
+                                            <!-- 재생 정지 버튼 끝 -->
+                                        
+                                            <!-- 좌우 이동 버튼 -->
+                                            <div class="btn">
+                                                <a href="#left" class="left"><img src="./img/2-images/prev.jpg" alt="prev"></a>
+                                                <a href="#right" class="right"><img src="./img/2-images/next.jpg" alt="next"></a>
+                                            </div>
+                                            <!-- 좌우 이동 버튼 끝 -->
+                                        
+                                        </section>
+                                        <!-- 섹션 끝! -->
+                                </div>
+
+                            </div>
+                            <!-- item_more_box -->
+
+                        </div>
+                        <!-- item_con_boxing -->
+                    </div>      
+                </div>
+                <!-- womens_cloth_box -->
+
+            </div>
+            <!-- page_boxing -->
+
+        </div>
+        <!-- page_04 end! -->
+
+        <!-- 아이템 카테고리 페이지 -->
+        <div class="page_05 page">
+
+            <div class="page_boxing">
+
+                <div class="food_box item_box">
+
+                    <div class="food_name item_name">
+                        <div class="item_name_box">
+                            <p>식품</p>
+                        </div>
+                        <div class="item_category_ul">
+                            <ul>
+                                <li>과일</li>
+                                <li>채소</li>
+                                <li>쌀/잡곡</li>
+                                <li>축산/계란</li>
+                                <li>수산물/건어물</li>
+                                <li>생수/음료</li>
+                                <li>커피/원두/차</li>
+                                <li>과자/시리얼</li>
+                                <li>면/통조림/가공식품</li>
+                                <li>간편식/반찬</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="food_con item_con">
+
+                        <div class="item_con_boxing">
+
+                            <div class="item_add_img"></div>
+
+                            <div class="item_more_box">
+
+                                <div class="item_attention_txt">
+                                    <p>창고형매장! 대용량푸드 SALE !</p>
+                                    <img src="./img/attention_right.png" alt="이동버튼">
+                                </div>
+                                
+                                <div class="item_list">
+
+                                <!--1. 배너박스를 만든다 -->
+                                <section class="banner_box">
+                                    <!-- 2. 배너를 만든다. -->
+                                    <div class="banner">
+                                        <!-- 3. 프레임을 만든다. -->
+                                        <div class="frame">
+                                            <ul class="item_style_set">
+                                                        
+                                            <li><a href="https://c11.kr/19wgh">
+                                                <img class="item_imgs" src="./img/food_item01.png" alt="food_01">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">셰프초이스 양념돼지갈비 (냉장)</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 22,400원</del></p>
+                                                <p>22,400원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,120원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품1번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wgp">
+                                                <img class="item_imgs" src="./img/food_item02.png" alt="food_02">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">미국산 LA식 갈비 선물세트 (냉동)</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">45% </font><del> 193,000원</del></p>
+                                                <p>104,900원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 4,745원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품2번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wgs">
+                                                <img class="item_imgs" src="./img/food_item03.png" alt="food_03">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">매일유업 매일두유 검은콩</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 21,420원</del></p>
+                                                <p>21,420원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,071원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품3번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wgu">
+                                                <img class="item_imgs" src="./img/food_item04.png" alt="food_04">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">금우촌 수제 돈가스 치즈 돈까스 옛날돈까스 등심 치킨가스 골라담기</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 16,900원</del></p>
+                                                <p>16,900원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 845원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품4번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wgw">
+                                                <img class="item_imgs" src="./img/food_item05.png" alt="food_05">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">설감 프리미엄 왕 반건시 선물세트 2호</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">25% </font><del> 39,900원</del></p>
+                                                <p>29,900원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,495원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품5번 끝 -->
+                                            </ul>
+                                            </div>
+                                            <!-- 프레임 끝 -->
+                                            </div>
+                                            <!-- 배너 끝 -->
+                                        
+                                            <!-- 재생 정지 버튼  -->
+                                            <div class="ctr_btn">
+                                                <a href="#play" class="play"><img src="./img/2-images/play.jpg" alt="play"></a>
+                                                <a href="#stop" class="stop"><img src="./img/2-images/stop.jpg" alt="stop"></a>
+                                            </div>
+                                            <!-- 재생 정지 버튼 끝 -->
+                                        
+                                            <!-- 좌우 이동 버튼 -->
+                                            <div class="btn">
+                                                <a href="#left" class="left"><img src="./img/2-images/prev.jpg" alt="prev"></a>
+                                                <a href="#right" class="right"><img src="./img/2-images/next.jpg" alt="next"></a>
+                                            </div>
+                                            <!-- 좌우 이동 버튼 끝 -->
+                                        
+                                        </section>
+                                        <!-- 섹션 끝! -->
+                                </div>
+
+                            </div>
+                            <!-- item_more_box -->
+
+                        </div>
+                        <!-- item_con_boxing -->
+                    </div>      
+                </div>
+                <!-- food_box -->
+
+            </div>
+            <!-- page_boxing -->
+
+        </div>
+        <!-- page_05 end! -->
+
+        <!-- 아이템 카테고리 페이지 -->
+        <div class="page_06 page">
+
+            <div class="page_boxing">
+
+                <div class="interior_box item_box">
+
+                    <div class="interior_name item_name">
+                        <div class="item_name_box">
+                            <p>가구 홈인테리어</p>
+                        </div>
+                        <div class="item_category_ul">
+                            <ul>
+                                <li>방한용품</li>
+                                <li>가구</li>
+                                <li>수납/정리</li>
+                                <li>홈데코</li>
+                                <li>조명/스탠드</li>
+                                <li>욕실</li>
+                                <li>침구</li>
+                                <li>원예/가드닝</li>
+                                <li>셀프인테리어</li>
+                                <li>수예/수선</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="interior_con item_con">
+
+                        <div class="item_con_boxing">
+
+                            <div class="item_add_img"></div>
+
+                            <div class="item_more_box">
+
+                                <div class="item_attention_txt">
+                                    <p>홈인테리어 SEASON OFF SALE !</p>
+                                    <img src="./img/attention_right.png" alt="이동버튼">
+                                </div>
+                                
+                                <div class="item_list">
+
+                                <!--1. 배너박스를 만든다 -->
+                                <section class="banner_box">
+                                    <!-- 2. 배너를 만든다. -->
+                                    <div class="banner">
+                                        <!-- 3. 프레임을 만든다. -->
+                                        <div class="frame">
+                                            <ul class="item_style_set">
+                                                        
+                                            <li><a href="https://c11.kr/19wh5">
+                                                <img class="item_imgs" src="./img/interior_item01.png" alt="인테리어_01">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">엘레나하임 더 플라워 샤기 러그</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">8% </font><del> 238,000원</del></p>
+                                                <p>216,980원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 10,849원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품1번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wh8">
+                                                <img class="item_imgs" src="./img/interior_item02.png" alt="인테리어_02">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">말랑하니 뒤집는 신생아 수유 취침등</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">21% </font><del> 18,900원</del></p>
+                                                <p>14,900원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 745원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품2번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whd">
+                                                <img class="item_imgs" src="./img/interior_item03.png" alt="인테리어_03">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">에코상사 고무나무 원목 2단 협탁 테이블</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">18% </font><del> 23,900원</del></p>
+                                                <p>19,450원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 973원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품3번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whe">
+                                                <img class="item_imgs" src="./img/interior_item04.png" alt="인테리어_04">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">조은리빙 논슬립 성인 철제 옷걸이</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">1% </font><del> 19,500원</del></p>
+                                                <p>19,250원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 963원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품4번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whf">
+                                                <img class="item_imgs" src="./img/interior_item05.png" alt="인테리어_05">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">테팔 이지케어 프라이팬 5종 세트 혼합색상</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">10% 75,940원</font><del> 75,940원</del></p>
+                                                <p>368,300원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 3,415원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품5번 끝 -->
+
+                                            </ul>
+                                            </div>
+                                            <!-- 프레임 끝 -->
+                                            </div>
+                                            <!-- 배너 끝 -->
+                                        
+                                            <!-- 재생 정지 버튼  -->
+                                            <div class="ctr_btn">
+                                                <a href="#play" class="play"><img src="./img/2-images/play.jpg" alt="play"></a>
+                                                <a href="#stop" class="stop"><img src="./img/2-images/stop.jpg" alt="stop"></a>
+                                            </div>
+                                            <!-- 재생 정지 버튼 끝 -->
+                                        
+                                            <!-- 좌우 이동 버튼 -->
+                                            <div class="btn">
+                                                <a href="#left" class="left"><img src="./img/2-images/prev.jpg" alt="prev"></a>
+                                                <a href="#right" class="right"><img src="./img/2-images/next.jpg" alt="next"></a>
+                                            </div>
+                                            <!-- 좌우 이동 버튼 끝 -->
+                                        
+                                        </section>
+                                        <!-- 섹션 끝! -->
+                                </div>
+
+                            </div>
+                            <!-- item_more_box -->
+
+                        </div>
+                        <!-- item_con_boxing -->
+                    </div>      
+                </div>
+                <!-- interior_box -->
+
+            </div>
+            <!-- page_boxing -->
+
+        </div>
+        <!-- page_06 end! -->
+
+        <!-- 아이템 카테고리 페이지 -->
+        <div class="page_07 page">
+
+            <div class="page_boxing">
+
+                <div class="digital_box item_box">
+
+                    <div class="digital_name item_name">
+                        <div class="item_name_box">
+                            <p>가전 디지털</p>
+                        </div>
+                        <div class="item_category_ul">
+                            <ul>
+                                <li>로켓설치</li>
+                                <li>TV/영상가전</li>
+                                <li>냉장고</li>
+                                <li>세탁기</li>
+                                <li>청소기</li>
+                                <li>뷰티/헤어가전</li>
+                                <li>주방가전</li>
+                                <li>컴퓨터</li>
+                                <li>휴대폰</li>
+                                <li>태블릿PC</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="digital_con item_con">
+
+                        <div class="item_con_boxing">
+
+                            <div class="item_add_img"></div>
+
+                            <div class="item_more_box">
+
+                                <div class="item_attention_txt">
+                                    <p>가성비 노트북&랩탑 추천 SALE !</p>
+                                    <img src="./img/attention_right.png" alt="이동버튼">
+                                </div>
+                                
+                                <div class="item_list">
+
+                                <!--1. 배너박스를 만든다 -->
+                                <section class="banner_box">
+                                    <!-- 2. 배너를 만든다. -->
+                                    <div class="banner">
+                                        <!-- 3. 프레임을 만든다. -->
+                                        <div class="frame">
+                                            <ul class="item_style_set">
+                                                        
+                                            <li><a href="https://c11.kr/19whj">
+                                                <img class="item_imgs" src="./img/digital_item01.png" alt="digital_01">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">Apple 2022 맥북 에어</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">6% </font><del> 2,230,000원</del></p>
+                                                <p>2,096,200원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 50,000원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품1번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whn">
+                                                <img class="item_imgs" src="./img/digital_item02.png" alt="digital_02">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">HP 2022 빅터스 16.1</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">10% </font><del> 1,399,000원</del></p>
+                                                <p>1,249,000원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 50,000원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품2번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whq">
+                                                <img class="item_imgs" src="./img/digital_item03.png" alt="digital_03">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">홈쇼핑 SA후지카 핸디형 미니히터 열풍기</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 35,400원 </del></p>
+                                                <p>35,400원  </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,770원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품3번 끝 -->
+
+                                            <li><a href="https://c11.kr/19whr">
+                                                <img class="item_imgs" src="./img/digital_item04.png" alt="digital_04">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">젠하이저 모멘텀4 와이어리스 블루투스 헤드폰</p>
+                                                <p> <font style="color: orangered; font-size: 15px;">6% </font><del> 479,000원</del></p>
+                                                <p>449,000원 </p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp; 최대 19,765원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품4번 끝 -->
+
+                                            <li><a href="https://c11.kr/19wht">
+                                                <img class="item_imgs" src="./img/digital_item05.png" alt="digital_05">
+                                            <div class="item_info">
+                                                <span>무료배송</span>
+                                                <p style="font-size: 15px;">LG전자 트롬 드럼세탁기 F21WDU 21kg 방문설치
+                                                </p>
+                                                <p> <font style="color: orangered; font-size: 15px;">9% </font><del> 994,170원</del></p>
+                                                <p>902,320원</p>
+                                                <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                                    style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 42,860원 적립</p>
+                                            </div> </a></li>
+                                            <!-- 상품5번 끝 -->
+                                            </ul>
+                                            </div>
+                                            <!-- 프레임 끝 -->
+                                            </div>
+                                            <!-- 배너 끝 -->
+                                        
+                                            <!-- 재생 정지 버튼  -->
+                                            <div class="ctr_btn">
+                                                <a href="#play" class="play"><img src="./img/2-images/play.jpg" alt="play"></a>
+                                                <a href="#stop" class="stop"><img src="./img/2-images/stop.jpg" alt="stop"></a>
+                                            </div>
+                                            <!-- 재생 정지 버튼 끝 -->
+                                        
+                                            <!-- 좌우 이동 버튼 -->
+                                            <div class="btn">
+                                                <a href="#left" class="left"><img src="./img/2-images/prev.jpg" alt="prev"></a>
+                                                <a href="#right" class="right"><img src="./img/2-images/next.jpg" alt="next"></a>
+                                            </div>
+                                            <!-- 좌우 이동 버튼 끝 -->
+                                        
+                                        </section>
+                                        <!-- 섹션 끝! -->
+                                </div>
+
+                            </div>
+                            <!-- item_more_box -->
+
+                        </div>
+                        <!-- item_con_boxing -->
+                    </div>      
+                </div>
+                <!-- digital_box -->
+
+            </div>
+            <!-- page_boxing -->
+
+        </div>
+        <!-- page_07 end! -->
+
+    <div class="page last_page">
+        <div class="page_boxing">
+
+            <div class="choice_items_box">
+                <div class="choice_items_name">
+                    <p>지금 이 상품이 필요하신가요?</p>
+                </div>
+                <div class="choice_items_con_box">
+                    <ul class="item_style_set">
+                                                        
+                        <li><a href="https://c11.kr/19whj">
+                            <img class="item_imgs" src="./img/digital_item01.png" alt="digital_01">
+                        <div class="item_info">
+                            <span>무료배송</span>
+                            <p style="font-size: 15px;">Apple 2022 맥북 에어</p>
+                            <p> <font style="color: orangered; font-size: 15px;">6% </font><del> 2,230,000원</del></p>
+                            <p>2,096,200원 </p>
+                            <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 50,000원 적립</p>
+                        </div> </a></li>
+                        <!-- 상품1번 끝 -->
+
+                        <li><a href="https://c11.kr/19wgu">
+                            <img class="item_imgs" src="./img/food_item04.png" alt="food_04">
+                        <div class="item_info">
+                            <span>무료배송</span>
+                            <p style="font-size: 15px;">금우촌 수제 돈가스 치즈 돈까스 옛날돈까스 등심 치킨가스 골라담기</p>
+                            <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 16,900원</del></p>
+                            <p>16,900원 </p>
+                            <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 845원 적립</p>
+                        </div> </a></li>
+                        <!-- 상품2번 끝 -->
+
+                        <li><a href="https://c11.kr/19wdw">
+                            <img class="item_imgs" src="./img/men_item04.png" alt="남성의류_04">
+                        <div class="item_info">
+                            <span>무료배송</span>
+                            <p style="font-size: 15px;">디엘크리 남성용 3버튼 싱글 울코트</p>
+                            <p> <font style="color: orangered; font-size: 15px;">12% </font><del> 149,000원</del></p>
+                            <p>130,450원 </p>
+                            <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 6,523원 적립</p>
+                        </div> </a></li>
+                        <!-- 상품3번 끝 -->
+
+                        <li><a href="https://c11.kr/19whq">
+                            <img class="item_imgs" src="./img/digital_item03.png" alt="digital_03">
+                        <div class="item_info">
+                            <span>무료배송</span>
+                            <p style="font-size: 15px;">홈쇼핑 SA후지카 핸디형 미니히터 열풍기</p>
+                            <p> <font style="color: orangered; font-size: 15px;">0% </font><del> 35,400원 </del></p>
+                            <p>35,400원  </p>
+                            <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 1,770원 적립</p>
+                        </div> </a></li>
+                        <!-- 상품4번 끝 -->
+
+                        <li><a href="https://c11.kr/19wc5">
+                            <img class="item_imgs" src="./img/women_item04.png" alt="여성의류_04">
+                        <div class="item_info">
+                            <span>무료배송</span>
+                            <p style="font-size: 15px;">에스랑제이 모노라인 여성 숄 머플러</p>
+                            <p> <font style="color: orangered; font-size: 15px;">20% </font><del> 25,000원</del></p>
+                            <p>19,800원 </p>
+                            <span><img src="./img/list-cash-icon@2x.png" alt="적립금액"
+                                style="width: 16px; height: 16px; margin-bottom: -4px;" > &nbsp;최대 990원 적립</p>
+                        </div> </a></li>
+                        <!-- 상품5번 끝 -->
+                    </ul>
+
+                </div>
+                <!-- choice_items_con_box end! -->
+            </div>
+            <!-- choice_items_box end! -->
+
+            <div class="cs_box">
+                <div class="cs_name">
+                    <p>365고객센터 | 전자금융거래분쟁처리담당센터</p>
+                </div>
+                <div class="cs_call_num">
+                    <p>1577 - 7011</p>
+                </div>
+            </div>
+            
+
+        <footer class="footer">
+            <div class="first_list">
+                <ul>
+                    <li>회사소개</li>
+                    <li>Investor Relations</li>
+                    <li>인재채용 입점 / 제휴문의</li>
+                    <li>고객의 소리 </li>
+                    <li>이용약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>쿠팡페이 이용약관</li>
+                    <li>쿠팡페이 개인정보처리방침</li>
+                </ul>
+            </div>
+            <div class="two_list_box">
+                <div class="ft_logo">
+                    <img src="./img/ft_cu_logo.png" alt="로고1">
+                </div>
+                <span>
+                상호명 및 호스팅 서비스 제공 : 쿠팡(주) 대표이사 : 강한승,박대준 <br>
+                서울시 송파구 송파대로 570 사업자 등록번호 : 120-88-00767 <br>
+                통신판매업신고 : 2017-서울송파-0680 사업자정보 확인 >
+                </span>
+                <span>
+                우리은행 채무지급보증 안내 <br>
+                당사는 고객님이 현금 결제한 금액에 대해 우리은행과 <br>
+                채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. <br>
+                서비스 가입사실 확인 >
+                </span>
+                <ul>
+                    <li>
+                        <img src="./img/sns_facebook.png" alt="페이스북"></li>
+                
+                    <li>
+                        <img src="./img/sns_insta.png" alt="인스타그램"></li>
+                
+                    <li>
+                        <img src="./img/sns_blog.png" alt="블로그"></li>
+                
+                </ul>
+                
+            </div>
+            <!-- two_list_box end! -->
+            <div class="logo_list_box">
+                <img src="./img/footer_logos.png" alt="로고2">
+            </div>
+            <div class="last_list_box">
+                <div class="last_list_txt">
+                사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 
+                마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+                마켓플레이스(오픈마켓) 상품의 경우 
+                쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다. <br>
+                쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.
+                쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, <br>
+                관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다. <br>
+                Copyright © Coupang Corp. 2010-2022 All Rights Reserved.
+                </div>
+            </div>
+            
+        </footer>
+        <!-- footer end! -->
+        </div>
+        <!-- page_boxing -->
+    </div>
+    <!-- last_page end!-->
+
+
+    </div>
+    <!-- wrap end! -->
+
+
+    
+</body>
+<!-- 바디 끝! -->
+
+</html>
+<!-- html 끝! -->
